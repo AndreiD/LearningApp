@@ -4,7 +4,7 @@
   <style name="AppTheme" parent="Theme.AppCompat">
     <!-- Customize your theme here. -->
 
-    <item name="colorPrimary">@color/app_window_bglight_color</item>
+    <item name="colorPrimary">@color/appcolor_dark_grey</item>
     <item name="colorPrimaryDark">@color/app_window_bglight_color</item>
     <item name="colorAccent">@color/app_window_bglight_color</item>
     <item name="android:windowBackground">@color/app_window_bglight_color</item>

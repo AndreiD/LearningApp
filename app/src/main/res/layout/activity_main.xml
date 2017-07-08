@@ -3,35 +3,128 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="qa.learningapp.MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".MainActivity"
     >
 
-  <TextView
-      android:id="@+id/message"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginLeft="@dimen/activity_horizontal_margin"
-      android:layout_marginStart="@dimen/activity_horizontal_margin"
-      android:layout_marginTop="@dimen/activity_vertical_margin"
-      android:text="@string/title_home"
-      app:layout_constraintLeft_toLeftOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      />
-
-  <android.support.design.widget.BottomNavigationView
-      android:id="@+id/navigation"
+  <ScrollView
       android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:layout_marginEnd="0dp"
-      android:layout_marginStart="0dp"
-      android:background="?android:attr/windowBackground"
-      app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintLeft_toLeftOf="parent"
       app:layout_constraintRight_toRightOf="parent"
-      app:menu="@menu/navigation"
-      />
+      >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        >
+
+      <TextView
+          android:id="@+id/textView_weather"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          style="@style/ImportantText"
+          android:layout_gravity="right"
+          android:gravity="right"
+          android:textSize="20dp"
+          android:text="loading weather..."
+          />
+
+      <Button
+          android:id="@+id/button_press_me"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginTop="16dp"
+          android:drawableLeft="@drawable/ic_person_black_24dp"
+          android:gravity="center"
+          android:text="PRESS ME"
+          android:textColor="#cccccc"
+          android:textSize="20sp"
+          />
+
+      <EditText
+          android:id="@+id/editText_username"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+
+          android:drawableLeft="@drawable/ic_person_black_24dp"
+          android:hint="Username"
+          android:inputType="textPersonName"
+          android:textColor="#cccccc"
+          android:textSize="20sp"
+          />
+
+
+      <CheckBox
+          android:id="@+id/checkbox_main"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:text="This is a checkbox"
+          android:textColor="#cccccc"
+          android:textSize="20sp"
+          />
+
+      <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/radiogroup"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:orientation="horizontal"
+          >
+
+        <RadioButton
+            android:id="@+id/radio_button_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="female"
+            />
+
+        <RadioButton
+            android:id="@+id/radio_button_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="male"
+            />
+      </RadioGroup>
+
+      <TextView
+          android:layout_marginTop="16dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Select the room size"
+          />
+
+      <Spinner
+          android:id="@+id/spinner_id_342"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="16dp"
+          android:entries="@array/roomSize"
+          />
+
+      <SeekBar
+          android:id="@+id/seekbar_one"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="16dp"
+          android:min="50"
+          android:max="500"
+          android:progress="100"
+          />
+
+
+
+
+    </LinearLayout>
+  </ScrollView>
+
 
 </android.support.constraint.ConstraintLayout>

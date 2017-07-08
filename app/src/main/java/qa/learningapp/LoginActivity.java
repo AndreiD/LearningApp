@@ -1,9 +1,9 @@
 package qa.learningapp;
 
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.WindowManager;
+import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -23,15 +23,54 @@ public class LoginActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_login);
     ButterKnife.bind(this);
+
+    editText_username.setText("test@test.com");
+    editText_password.setText("123456");
   }
 
   @OnClick(R.id.button_login)
   public void onClickLogin() {
-    Snackbar.make(findViewById(android.R.id.content), "LOGIN CLICKED", Snackbar.LENGTH_SHORT).show();
+    if (!verify_login()) {
+      return;
+    }
+
+    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+  }
+
+  private boolean verify_login() {
+
+    String username = editText_username.getText().toString().trim();
+    String password = editText_password.getText().toString();
+
+    if (!isValidEmail(username)) {
+      DialogFactory.error_toast(LoginActivity.this, "invalid email").show();
+      return false;
+    }
+
+    if (password.length() < 6) {
+      DialogFactory.error_toast(LoginActivity.this, "password should be at least 6 characters").show();
+      return false;
+    }
+
+    if(!username.equals("test@test.com") || !password.equals("123456")){
+      DialogFactory.error_toast(LoginActivity.this, "invalid username or password"
+          + "").show();
+      return false;
+    }
+
+    return true;
   }
 
   @OnClick(R.id.textView_forgot)
   public void onClickForgot() {
     DialogFactory.error_toast(LoginActivity.this, "Ops! An Error Occurred").show();
+  }
+
+  public final static boolean isValidEmail(CharSequence target) {
+    if (TextUtils.isEmpty(target)) {
+      return false;
+    } else {
+      return android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
+    }
   }
 }
