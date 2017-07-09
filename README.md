@@ -24,6 +24,11 @@ For learning automated mobile testing
    5. To run tests on Windows, you will need to have the Android Emulator booted or an Android Device connected that is running an AVD with API Level 17 or greater. Then run Appium on the command line (via the `appium` command)
    6. Your test script should ensure that the `platformVersion` capability corresponds to the emulator or device version you are testing, and that the `app` capability is an absolute path to the .apk file of the Android app.
 
+#### Troubleshooting
+
+1. Android Application run with -t
+
+
 #### License
 
 ~~~~
