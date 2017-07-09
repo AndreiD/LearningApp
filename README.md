@@ -8,12 +8,12 @@ For learning automated mobile testing
 
 
 #### Part 1
-Download latest node and npm tools MSI (version >= 6.0) https://nodejs.org/download/release/v6.3.0/node-v6.3.0-x64.msi 
-The npm and nodejs paths should be in your PATH environment variable. (by default they are)
-Open admin cmd prompt
-Run the command npm install -g appium which will install Appium from NPM
-run appium from the prompt.
-Download and install https://github.com/appium/appium-desktop/releases
+- Download latest node and npm tools MSI (version >= 6.0) https://nodejs.org/download/release/v6.3.0/node-v6.3.0-x64.msi 
+- The npm and nodejs paths should be in your PATH environment variable. (by default they are)
+- Open admin cmd prompt
+- Run the command npm install -g appium which will install Appium from NPM
+- run appium from the prompt.
+- Download and install https://github.com/appium/appium-desktop/releases
 
 #### Part 2
 
