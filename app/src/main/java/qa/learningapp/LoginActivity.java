@@ -24,8 +24,6 @@ public class LoginActivity extends AppCompatActivity {
     setContentView(R.layout.activity_login);
     ButterKnife.bind(this);
 
-    editText_username.setText("test@test.com");
-    editText_password.setText("123456");
   }
 
   @OnClick(R.id.button_login)
