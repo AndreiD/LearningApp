@@ -64,11 +64,7 @@ public class LoginActivity extends AppCompatActivity {
     DialogFactory.error_toast(LoginActivity.this, "Ops! An Error Occurred").show();
   }
 
-  public final static boolean isValidEmail(CharSequence target) {
-    if (TextUtils.isEmpty(target)) {
-      return false;
-    } else {
-      return android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
-    }
+  private static boolean isValidEmail(CharSequence target) {
+    return !TextUtils.isEmpty(target) && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
   }
 }

@@ -20,7 +20,6 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
-  private TextView mTextMessage;
   @BindView(R.id.button_press_me) Button button_press_me;
   @BindView(R.id.textView_weather) TextView textView_weather;
   @BindView(R.id.spinner_id_342) Spinner spinner_id_342;

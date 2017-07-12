@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -19,7 +18,7 @@
       >
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:orientation="vertical"
         >
@@ -31,7 +30,7 @@
           style="@style/ImportantText"
           android:layout_gravity="right"
           android:gravity="right"
-          android:textSize="20dp"
+          android:textSize="20sp"
           android:text="loading weather..."
           />
 
@@ -53,6 +52,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_marginTop="16dp"
+          android:layout_marginBottom="16dp"
 
           android:drawableLeft="@drawable/ic_person_black_24dp"
           android:hint="Username"
@@ -69,13 +69,14 @@
           android:layout_marginTop="16dp"
           android:text="This is a checkbox"
           android:textColor="#cccccc"
+          android:layout_marginBottom="16dp"
           android:textSize="20sp"
           />
 
       <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-          android:id="@+id/radiogroup"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_marginBottom="16dp"
           android:layout_marginTop="16dp"
           android:orientation="horizontal"
           >
@@ -99,6 +100,7 @@
           android:layout_marginTop="16dp"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_marginBottom="16dp"
           android:text="Select the room size"
           />
 
@@ -106,6 +108,7 @@
           android:id="@+id/spinner_id_342"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
           android:layout_marginBottom="16dp"
           android:entries="@array/roomSize"
           />
@@ -115,7 +118,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_marginBottom="16dp"
-          android:min="50"
+          android:layout_marginTop="16dp"
           android:max="500"
           android:progress="100"
           />

@@ -1,28 +1,8 @@
-<resources xmlns:android="http://schemas.android.com/tools">
+<resources>
   <string name="app_name">Learning App</string>
-  <string name="title_home">Home</string>
-  <string name="title_dashboard">Dashboard</string>
-  <string name="title_notifications">Notifications</string>
-  <string name="action_settings">Settings</string>
-  <string name="action_exit">Exit</string>
-  <string name="action_feedback">Feedback</string>
-  <string name="retry">Retry</string>
-  <string name="internet_is_required_to_run_this_app">Internet is required to run this app</string>
-  <string name="enable_notifications">Enable Notifications</string>
-  <string name="perf_profile">Your Profile</string>
-  <string name="first_name">First Name</string>
-  <string name="options">Options</string>
-  <string name="share">Share</string>
-  <string name="settings_saved">Settings saved</string>
-  <string name="send_feedback">Send Feedback</string>
-  <string name="version">Beta 0.1</string>
-  <string name="about">About</string>
   <string name="settings">Settings</string>
-  <string name="icon_by">Splash Icon by Vitor Fernandes https://thenounproject.com/vitoroffffff/</string>
   <string name="dialog_action_ok">OK</string>
   <string name="generic_error_title">Error</string>
-  <string name="dialog_general_error_message">A general error has occured.</string>
-  <string name="second_activity">Second activity</string>
   <string name="title_activity_settings">Settings</string>
 
   <!-- Strings related to Settings -->
@@ -52,8 +32,8 @@
   <string name="pref_header_data_sync">Data &amp; sync</string>
 
   <string-array name="roomSize">
-    <item>Small(0-4)</item>
-    <item>Medium(4-8)</item>
+    <item>Small(0–4)</item>
+    <item>Medium(4–8)</item>
     <item>Large(9+)</item>
   </string-array>
 
@@ -74,20 +54,6 @@
     <item>360</item>
     <item>-1</item>
   </string-array>
-
-  <string-array name="list_preference_entries">
-    <item>Entry 1</item>
-    <item>Entry 2</item>
-    <item>Entry 3</item>
-  </string-array>
-
-  <string-array name="list_preference_entry_values">
-    <item>1</item>
-    <item>2</item>
-    <item>3</item>
-  </string-array>
-
-  <string-array name="multi_select_list_preference_default_value"/>
 
   <string name="pref_title_system_sync_settings">System sync settings</string>
 
